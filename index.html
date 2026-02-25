@@ -3,17 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oplined — Your Operations, Lined.</title>
-<meta name="description" content="The placement network for AI operators. Vetted through live builds, not resumes. Both sides apply. Both sides get selected.">
-<meta property="og:title" content="Oplined — Your Operations, Lined.">
-<meta property="og:description" content="We place vetted AI operators into $5M-$50M companies. Both sides apply. Both sides get selected.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://oplined.com">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@oplined">
-<meta name="twitter:title" content="Oplined — Your Operations, Lined.">
-<meta name="twitter:description" content="We place vetted AI operators into $5M-$50M companies. Both sides apply. Both sides get selected.">
-<link rel="canonical" href="https://oplined.com">
+<title>AI Operator Network</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -37,21 +27,26 @@
     --fd: 'Instrument Serif', Georgia, serif;
     --fb: 'DM Sans', sans-serif;
     --fm: 'JetBrains Mono', monospace;
-    --sp-section: 80px;
-    --sp-xl: 48px;
+
+    --sp-section: 100px;
+    --sp-xl: 56px;
     --sp-lg: 32px;
     --sp-md: 24px;
     --sp-sm: 16px;
+    --gutter: 80px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--white);font-family:var(--fb);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   ::selection{background:var(--accent);color:var(--white)}
-  body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.022;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:256px}
-  .wrap{max-width:1200px;margin:0 auto;padding:0 56px}
 
-  /* HERO */
+  body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.022;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:256px}
+
+  .wrap{max-width:1400px;margin:0 auto;padding:0 var(--gutter)}
+
+  /* ═══════════════ HERO ═══════════════ */
   .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;padding:80px 24px 48px}
+
   .hero-bg{position:absolute;inset:0;z-index:0}
   .orb{position:absolute;border-radius:50%;filter:blur(140px);animation:drift 25s ease-in-out infinite}
   .orb-1{width:700px;height:700px;background:radial-gradient(circle,rgba(181,41,62,0.1) 0%,transparent 70%);top:-10%;right:-10%;animation-delay:-4s}
@@ -59,65 +54,81 @@
   .orb-3{width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.02) 0%,transparent 70%);top:30%;left:50%;animation-delay:-9s}
   @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.04)}66%{transform:translate(-30px,40px) scale(0.96)}}
   .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse 50% 50% at 50% 45%,black 10%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 45%,black 10%,transparent 70%)}
-  .hero-inner{position:relative;z-index:1;max-width:880px}
-  .hero-tag{font-family:var(--fm);font-size:12px;font-weight:300;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);margin-bottom:36px;display:inline-flex;align-items:center;gap:14px}
-  .hero-tag::before,.hero-tag::after{content:'';width:32px;height:1px;background:var(--accent);opacity:0.5}
-  .hero h1{font-family:var(--fd);font-size:clamp(48px,7.5vw,96px);font-weight:400;line-height:0.94;letter-spacing:-0.03em;margin-bottom:28px}
+
+  .hero-inner{position:relative;z-index:1;max-width:1100px;width:100%;padding:0 40px}
+
+  .hero-tag{font-family:var(--fm);font-size:12px;font-weight:300;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);margin-bottom:40px;display:inline-flex;align-items:center;gap:18px}
+  .hero-tag::before,.hero-tag::after{content:'';width:48px;height:1px;background:var(--accent);opacity:0.5}
+
+  .hero h1{font-family:var(--fd);font-size:clamp(48px,8.5vw,112px);font-weight:400;line-height:0.94;letter-spacing:-0.03em;margin-bottom:32px}
   .hero h1 i{font-style:italic;color:var(--accent)}
-  .hero-sub{font-size:18px;color:var(--g3);max-width:480px;margin:0 auto 40px;line-height:1.7;font-weight:300}
-  .hero-ctas{display:flex;gap:12px;justify-content:center;margin-bottom:36px;flex-wrap:wrap}
-  .btn{font-family:var(--fb);font-size:14px;font-weight:500;letter-spacing:0.05em;padding:16px 44px;cursor:pointer;text-decoration:none;transition:all 0.3s;position:relative;border:none}
+
+  .hero-sub{font-size:19px;color:var(--g3);max-width:580px;margin:0 auto 44px;line-height:1.7;font-weight:300}
+
+  .hero-ctas{display:flex;gap:16px;justify-content:center;margin-bottom:40px;flex-wrap:wrap}
+
+  .btn{font-family:var(--fb);font-size:15px;font-weight:500;letter-spacing:0.05em;padding:18px 56px;cursor:pointer;text-decoration:none;transition:all 0.3s;position:relative;border:none}
   .btn-fill{background:var(--accent);color:var(--white)}
   .btn-fill::after{content:'';position:absolute;inset:0;background:var(--accent);filter:blur(28px);opacity:0.3;z-index:-1;transition:opacity 0.3s}
   .btn-fill:hover{transform:translateY(-2px)}.btn-fill:hover::after{opacity:0.5}
   .btn-line{background:transparent;color:var(--white);border:1px solid var(--g5)}
   .btn-line:hover{border-color:var(--white);transform:translateY(-2px)}
-  .hero-nav{display:flex;gap:28px;justify-content:center;margin-bottom:40px}
+
+  .hero-nav{display:flex;gap:36px;justify-content:center;margin-bottom:44px}
   .hero-nav a{font-family:var(--fm);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--g4);text-decoration:none;transition:color 0.3s;padding:6px 0;position:relative}
   .hero-nav a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--accent);transform:scaleX(0);transition:transform 0.3s}
   .hero-nav a:hover{color:var(--white)}
   .hero-nav a:hover::after{transform:scaleX(1)}
-  .hero-stats{display:flex;gap:0;justify-content:center;border-top:1px solid var(--bdr);width:100%;max-width:680px;margin:0 auto}
-  .h-stat{flex:1;padding:24px 16px;text-align:center;border-right:1px solid var(--bdr)}
-  .h-stat:last-child{border-right:none}
-  .h-stat-num{font-family:var(--fd);font-size:30px;font-weight:400;line-height:1;color:var(--white)}
-  .h-stat-num span{color:var(--accent)}
-  .h-stat-lbl{font-family:var(--fm);font-size:10px;color:var(--g4);letter-spacing:0.18em;text-transform:uppercase;margin-top:6px}
 
-  /* SECTIONS */
+  .hero-stats{display:flex;gap:0;justify-content:center;border-top:1px solid var(--bdr);width:100%;max-width:900px;margin:0 auto}
+  .h-stat{flex:1;padding:28px 24px;text-align:center;border-right:1px solid var(--bdr)}
+  .h-stat:last-child{border-right:none}
+  .h-stat-num{font-family:var(--fd);font-size:34px;font-weight:400;line-height:1;color:var(--white)}
+  .h-stat-num span{color:var(--accent)}
+  .h-stat-lbl{font-family:var(--fm);font-size:10px;color:var(--g4);letter-spacing:0.18em;text-transform:uppercase;margin-top:8px}
+
+  /* ═══════════════ SHARED ═══════════════ */
   .s{padding:var(--sp-section) 0;position:relative}
   .s-bt{border-top:1px solid var(--bdr)}
+
   .lbl{font-family:var(--fm);font-size:11px;font-weight:300;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+
   .s-h{font-family:var(--fd);font-size:clamp(36px,5vw,56px);font-weight:400;line-height:1.1;letter-spacing:-0.02em;margin-bottom:18px}
   .s-h i{font-style:italic}
+
   .s-p{font-size:17px;color:var(--g3);max-width:600px;line-height:1.75;font-weight:300}
   .s-p+.s-p{margin-top:14px}
 
-  /* WHY */
-  .why-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:72px;align-items:start;margin-top:var(--sp-xl)}
-  .why-grid .s-p{max-width:100%}
-  .pullquote{font-family:var(--fd);font-size:26px;font-style:italic;line-height:1.4;color:var(--g1);padding-left:24px;border-left:2px solid var(--accent);margin-top:16px}
+  /* ═══════════════ WHY — full-width split ═══════════════ */
+  .why-s{display:grid;grid-template-columns:1.15fr 0.85fr;min-height:0}
+  .why-left{padding:var(--sp-section) var(--sp-xl) var(--sp-section) var(--gutter);border-right:1px solid var(--bdr)}
+  .why-left .s-p{max-width:540px}
+  .why-right{display:flex;flex-direction:column;justify-content:center;padding:var(--sp-section) var(--gutter) var(--sp-section) var(--sp-xl);position:relative}
+  .pullquote{font-family:var(--fd);font-size:32px;font-style:italic;line-height:1.35;color:var(--g1);padding-left:28px;border-left:2px solid var(--accent)}
+  .why-note{font-family:var(--fm);font-size:11px;color:var(--g4);letter-spacing:0.1em;margin-top:28px;padding-left:28px}
 
-  /* OPERATOR DEF */
-  .op-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;margin-top:var(--sp-xl);align-items:start}
+  /* ═══════════════ OPERATOR DEF — offset ═══════════════ */
+  .role-header{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-xl);align-items:end;margin-bottom:var(--sp-xl)}
+  .role-header .s-p{max-width:100%;margin-bottom:0}
+  .op-grid{display:grid;grid-template-columns:1.3fr 0.7fr;gap:0;border-top:1px solid var(--bdr)}
   .op-list{list-style:none;counter-reset:op}
-  .op-list li{counter-increment:op;padding:16px 0;border-bottom:1px solid var(--bdr);font-size:16px;color:var(--g3);font-weight:300;display:flex;align-items:baseline;gap:16px;transition:color 0.3s,padding-left 0.3s}
+  .op-list li{counter-increment:op;padding:20px 32px 20px 0;border-bottom:1px solid var(--bdr);font-size:16px;color:var(--g3);font-weight:300;display:flex;align-items:baseline;gap:16px;transition:color 0.3s,padding-left 0.3s}
   .op-list li:hover{color:var(--white);padding-left:8px}
   .op-list li::before{content:counter(op,decimal-leading-zero);font-family:var(--fm);font-size:11px;color:var(--accent);letter-spacing:0.1em;flex-shrink:0}
-  .tools-w{margin-top:32px}
-  .tools-lbl{font-family:var(--fm);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--g4);margin-bottom:14px}
+  .tools-w{padding:32px 0 32px 48px;border-left:1px solid var(--bdr);height:100%;display:flex;flex-direction:column;justify-content:center}
+  .tools-lbl{font-family:var(--fm);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--g4);margin-bottom:18px}
   .tools-f{display:flex;flex-wrap:wrap;gap:8px}
   .t-pill{font-family:var(--fm);font-size:12px;padding:10px 16px;background:var(--bg-card);border:1px solid var(--bdr);color:var(--g4);transition:all 0.3s}
   .t-pill:hover{border-color:var(--accent);color:var(--accent)}
 
-  /* TRACKS */
+  /* ═══════════════ TRACKS ═══════════════ */
   .tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:var(--sp-xl);background:var(--bdr)}
-  .trk{background:var(--bg);padding:40px 32px;display:flex;flex-direction:column;transition:background 0.4s}
+  .trk{background:var(--bg);padding:48px 36px;display:flex;flex-direction:column;transition:background 0.4s}
   .trk:hover{background:var(--bg-card-h)}
-  .trk-badge{font-family:var(--fm);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid var(--bdr)}
-  .trk-h{font-family:var(--fd);font-size:30px;font-weight:400;margin-bottom:12px;line-height:1.15}
-  .trk-p{font-size:15px;color:var(--g3);line-height:1.7;margin-bottom:24px;font-weight:300}
-  .trk-ul{list-style:none;margin-bottom:28px;flex-grow:1}
+  .trk-badge{font-family:var(--fm);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:28px;padding-bottom:14px;border-bottom:1px solid var(--bdr)}
+  .trk-h{font-family:var(--fd);font-size:34px;font-weight:400;margin-bottom:14px;line-height:1.15}
+  .trk-p{font-size:15px;color:var(--g3);line-height:1.7;margin-bottom:28px;font-weight:300}
+  .trk-ul{list-style:none;margin-bottom:32px;flex-grow:1}
   .trk-ul li{font-size:14px;color:var(--g4);padding:10px 0;display:flex;align-items:baseline;gap:10px;font-weight:300;border-bottom:1px solid rgba(255,255,255,0.025);transition:color 0.3s}
   .trk-ul li:hover{color:var(--g1)}
   .trk-ul .a{color:var(--accent);font-size:12px;flex-shrink:0}
@@ -125,43 +136,56 @@
   .trk-btn{font-family:var(--fm);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--white);background:0;border:1px solid var(--g5);padding:16px 24px;cursor:pointer;text-decoration:none;text-align:center;transition:all 0.3s}
   .trk-btn:hover{border-color:var(--accent);color:var(--accent);box-shadow:0 0 32px rgba(181,41,62,0.12)}
 
-  /* STEPS */
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:var(--sp-xl)}
-  .stp{padding:32px 24px;border-right:1px solid var(--bdr)}
+  /* ═══════════════ STEPS — with header row ═══════════════ */
+  .steps-s{border-top:1px solid var(--bdr)}
+  .steps-header{display:flex;justify-content:space-between;align-items:end;padding:var(--sp-section) 0 var(--sp-xl)}
+  .steps-header .s-h{margin-bottom:0}
+  .steps-header-left{display:flex;flex-direction:column}
+  .steps-header-note{font-family:var(--fm);font-size:12px;color:var(--g4);letter-spacing:0.05em}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--bdr)}
+  .stp{padding:36px 32px 48px 0;border-right:1px solid var(--bdr);position:relative}
   .stp:last-child{border-right:none}
-  .stp-n{font-family:var(--fd);font-size:48px;color:var(--accent);opacity:0.4;line-height:1;margin-bottom:16px}
-  .stp-h{font-size:17px;font-weight:500;margin-bottom:8px}
+  .stp:first-child{padding-left:0}
+  .stp:not(:first-child){padding-left:32px}
+  .stp-n{font-family:var(--fd);font-size:64px;color:var(--accent);opacity:0.3;line-height:1;margin-bottom:20px}
+  .stp-h{font-size:18px;font-weight:500;margin-bottom:10px}
   .stp-p{font-size:14px;color:var(--g4);line-height:1.75;font-weight:300}
 
-  /* STATS */
+  /* ═══════════════ STATS — split layout ═══════════════ */
   .stats-s{padding:var(--sp-section) 0;position:relative;overflow:hidden}
-  .stats-s::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(181,41,62,0.06) 0%,transparent 60%);pointer-events:none}
-  .stats-r{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
-  .st-b{text-align:center;padding:32px 16px;position:relative}
-  .st-b::after{content:'';position:absolute;right:0;top:20%;bottom:20%;width:1px;background:var(--bdr)}
-  .st-b:last-child::after{display:none}
-  .st-n{font-family:var(--fd);font-size:clamp(40px,5vw,60px);font-weight:400;line-height:1;margin-bottom:10px}
+  .stats-s::before{content:'';position:absolute;top:50%;left:30%;transform:translate(-50%,-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(181,41,62,0.06) 0%,transparent 60%);pointer-events:none}
+  .stats-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:start;position:relative}
+  .stats-left{padding-right:var(--sp-xl);border-right:1px solid var(--bdr)}
+  .stats-left .lbl{margin-bottom:var(--sp-lg)}
+  .st-row{display:flex;justify-content:space-between;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--bdr)}
+  .st-row:first-of-type{border-top:1px solid var(--bdr)}
+  .st-n{font-family:var(--fd);font-size:clamp(40px,5vw,56px);font-weight:400;line-height:1}
   .st-n span{color:var(--accent)}
-  .st-l{font-family:var(--fm);font-size:11px;color:var(--g4);letter-spacing:0.15em;text-transform:uppercase}
-
-  /* INDUSTRIES */
-  .ind-w{margin-top:var(--sp-xl);display:flex;justify-content:center}
-  .ind-f{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:900px}
+  .st-l{font-family:var(--fm);font-size:12px;color:var(--g4);letter-spacing:0.12em;text-transform:uppercase;text-align:right}
+  .stats-right{padding-left:var(--sp-xl)}
+  .stats-right .lbl{margin-bottom:var(--sp-lg)}
+  .ind-f{display:flex;flex-wrap:wrap;gap:8px}
   .ind-t{font-family:var(--fm);font-size:12px;padding:12px 20px;border:1px solid var(--bdr);color:var(--g4);letter-spacing:0.04em;transition:all 0.3s;cursor:default}
   .ind-t:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
 
-  /* TESTIMONIALS */
-  .tst-g{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:var(--sp-xl);background:var(--bdr)}
-  .tst{background:var(--bg);padding:36px 32px;transition:background 0.4s}
+  /* ═══════════════ TESTIMONIALS — staggered ═══════════════ */
+  .tst-layout{display:grid;grid-template-columns:1.1fr 0.9fr;gap:1px;margin-top:var(--sp-xl);background:var(--bdr)}
+  .tst-col{display:flex;flex-direction:column;gap:1px}
+  .tst{background:var(--bg);padding:40px 36px;transition:background 0.4s}
   .tst:hover{background:var(--bg-card-h)}
-  .tst.wide{grid-column:span 2}
   .tst-q{font-family:var(--fd);font-size:20px;font-weight:400;line-height:1.5;color:var(--g1);margin-bottom:16px;font-style:italic;position:relative;padding-left:22px}
   .tst-q::before{content:'';position:absolute;left:0;top:4px;bottom:4px;width:2px;background:var(--accent)}
   .tst-at{font-family:var(--fm);font-size:11px;color:var(--g4);letter-spacing:0.08em;padding-left:22px}
+  .tst-featured{padding:56px 44px}
+  .tst-featured .tst-q{font-size:26px;line-height:1.45}
 
-  /* FAQ */
-  .faq-g{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:var(--sp-xl)}
-  .faq-cl{font-family:var(--fm);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--bdr)}
+  /* ═══════════════ FAQ — sidebar + content ═══════════════ */
+  .faq-layout{display:grid;grid-template-columns:0.35fr 1fr;gap:var(--sp-xl)}
+  .faq-sidebar{position:sticky;top:80px;align-self:start}
+  .faq-title{font-family:var(--fd);font-size:clamp(28px,3vw,36px);font-weight:400;line-height:1.1;margin-bottom:12px}
+  .faq-sidebar-note{font-size:14px;color:var(--g4);line-height:1.7;font-weight:300}
+  .faq-main{display:flex;flex-direction:column;gap:40px}
+  .faq-cl{font-family:var(--fm);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--bdr)}
   .fq{border-bottom:1px solid var(--bdr);overflow:hidden}
   .fq-q{padding:14px 0;cursor:pointer;font-size:15px;font-weight:400;color:var(--g1);display:flex;justify-content:space-between;align-items:center;user-select:none;transition:color 0.3s;gap:12px}
   .fq-q:hover{color:var(--accent)}
@@ -171,66 +195,92 @@
   .fq.open .fq-a{max-height:300px;padding-bottom:14px}
   .fq-a p{font-size:14px;color:var(--g4);line-height:1.75;font-weight:300}
 
-  /* BOTTOM CTA */
-  .cta-end{text-align:center;padding:var(--sp-section) 0;position:relative;overflow:hidden}
-  .cta-end::before{content:'';position:absolute;bottom:-20%;left:50%;transform:translateX(-50%);width:1100px;height:700px;background:radial-gradient(ellipse,rgba(181,41,62,0.08) 0%,transparent 55%);pointer-events:none}
-  .cta-end .s-h{margin-bottom:14px}
-  .cta-end .s-p{margin:0 auto 40px;max-width:480px;text-align:center}
-  .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:24px;position:relative;z-index:1}
+  /* ═══════════════ BOTTOM CTA — left-aligned ═══════════════ */
+  .cta-end{padding:var(--sp-section) 0;position:relative;overflow:hidden}
+  .cta-end::before{content:'';position:absolute;bottom:-20%;left:30%;transform:translateX(-50%);width:1100px;height:700px;background:radial-gradient(ellipse,rgba(181,41,62,0.08) 0%,transparent 55%);pointer-events:none}
+  .cta-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:var(--sp-xl);align-items:end;position:relative;z-index:1}
+  .cta-inner .s-h{margin-bottom:14px}
+  .cta-inner .s-p{max-width:480px;margin-bottom:32px}
+  .cta-btns{display:flex;gap:12px;flex-wrap:wrap}
+  .cta-right{text-align:right}
   .cta-note{font-family:var(--fm);font-size:11px;color:var(--g4);letter-spacing:0.1em}
 
-  /* FOOTER */
-  footer{padding:28px 56px;border-top:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center}
+  /* ═══════════════ FOOTER ═══════════════ */
+  footer{padding:28px var(--gutter);border-top:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center}
   footer p{font-family:var(--fm);font-size:11px;color:var(--g4);letter-spacing:0.08em}
-  footer a{color:var(--g4);text-decoration:none;transition:color 0.3s}
-  footer a:hover{color:var(--accent)}
 
-  /* ANIMATIONS */
+  /* ═══════════════ ANIMATIONS ═══════════════ */
   .rv{opacity:0;transform:translateY(28px);transition:opacity 0.9s cubic-bezier(0.16,1,0.3,1),transform 0.9s cubic-bezier(0.16,1,0.3,1)}
   .rv.v{opacity:1;transform:translateY(0)}
   .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}.d6{transition-delay:.48s}
 
-  /* TABLET */
+  /* ═══════════════ TABLET ═══════════════ */
   @media(max-width:1100px){
-    .tracks,.faq-g{grid-template-columns:1fr}
+    :root{--gutter:48px}
+    .why-s{grid-template-columns:1fr}
+    .why-left{border-right:none;padding:var(--sp-section) var(--gutter)}
+    .why-right{padding:0 var(--gutter) var(--sp-section)}
+    .role-header{grid-template-columns:1fr;gap:16px}
+    .op-grid{grid-template-columns:1fr}
+    .tools-w{border-left:none;padding:32px 0;border-top:1px solid var(--bdr)}
+    .tracks{grid-template-columns:1fr}
     .steps{grid-template-columns:repeat(2,1fr)}
     .stp{border-right:none;border-bottom:1px solid var(--bdr)}
-    .tst-g{grid-template-columns:1fr}.tst.wide{grid-column:span 1}
-    .stats-r{grid-template-columns:repeat(2,1fr)}
-    .st-b:nth-child(2)::after{display:none}
-    .why-grid,.op-grid{grid-template-columns:1fr;gap:40px}
-    .wrap{padding:0 32px}
+    .stp:not(:first-child){padding-left:0}
+    .stats-inner{grid-template-columns:1fr}
+    .stats-left{border-right:none;padding-right:0;padding-bottom:var(--sp-xl);border-bottom:1px solid var(--bdr);margin-bottom:var(--sp-xl)}
+    .stats-right{padding-left:0}
+    .tst-layout{grid-template-columns:1fr}
+    .faq-layout{grid-template-columns:1fr}
+    .faq-sidebar{position:static}
+    .cta-inner{grid-template-columns:1fr;text-align:left}
+    .cta-right{text-align:left;margin-top:8px}
   }
 
-  /* MOBILE */
+  /* ═══════════════ MOBILE ═══════════════ */
   @media(max-width:768px){
-    :root{--sp-section:56px;--sp-xl:36px;--sp-lg:24px;--sp-md:18px}
+    :root{
+      --sp-section:64px;
+      --sp-xl:36px;
+      --sp-lg:24px;
+      --sp-md:18px;
+      --gutter:20px;
+    }
+
     body{font-size:16px}
-    .wrap{padding:0 20px}
+
     .hero{padding:80px 20px 40px;min-height:auto;min-height:100dvh}
+    .hero-inner{padding:0;max-width:100%}
     .hero h1{font-size:clamp(40px,12vw,56px);margin-bottom:20px}
-    .hero-tag{font-size:11px;margin-bottom:28px;letter-spacing:0.25em}
-    .hero-sub{font-size:16px;margin-bottom:32px;max-width:340px;line-height:1.65}
-    .hero-ctas{flex-direction:column;width:100%;max-width:100%;margin-bottom:28px}
+    .hero-tag{font-size:11px;margin-bottom:24px;letter-spacing:0.2em;gap:10px}
+    .hero-tag::before,.hero-tag::after{width:20px}
+    .hero-sub{font-size:16px;margin-bottom:28px;max-width:100%;line-height:1.65}
+    .hero-ctas{flex-direction:column;width:100%;max-width:100%;margin-bottom:24px;gap:10px}
     .btn{width:100%;text-align:center;padding:18px 24px;font-size:14px}
-    .hero-nav{flex-wrap:wrap;gap:12px 20px;margin-bottom:32px}
-    .hero-nav a{font-size:12px;padding:8px 0}
+    .hero-nav{flex-wrap:wrap;gap:10px 18px;margin-bottom:28px}
+    .hero-nav a{font-size:11px;padding:8px 0}
     .hero-stats{flex-direction:column;max-width:100%}
-    .h-stat{border-right:none;border-bottom:1px solid var(--bdr);padding:16px;display:flex;justify-content:space-between;align-items:center}
+    .h-stat{border-right:none;border-bottom:1px solid var(--bdr);padding:14px 0;display:flex;justify-content:space-between;align-items:center}
     .h-stat:last-child{border-bottom:none}
-    .h-stat-num{font-size:28px}
-    .h-stat-lbl{margin-top:0}
+    .h-stat-num{font-size:26px}
+    .h-stat-lbl{margin-top:0;font-size:10px}
+
     .lbl{font-size:11px;margin-bottom:12px}
     .s-h{font-size:clamp(28px,8vw,40px);margin-bottom:14px}
     .s-p{font-size:16px;line-height:1.7;max-width:100%}
     .s-p+.s-p{margin-top:12px}
-    .pullquote{font-size:22px;padding-left:18px;margin-top:8px}
-    .op-list li{font-size:15px;padding:14px 0;gap:14px}
+
+    .why-left{padding:var(--sp-section) var(--gutter) 32px}
+    .why-right{padding:0 var(--gutter) var(--sp-section)}
+    .pullquote{font-size:22px;padding-left:18px}
+    .why-note{padding-left:18px;margin-top:20px}
+
+    .op-list li{font-size:15px;padding:16px 0;gap:14px}
     .op-list li::before{font-size:11px}
-    .tools-w{margin-top:28px}
     .tools-lbl{font-size:11px}
     .t-pill{font-size:12px;padding:10px 14px}
-    .trk{padding:32px 20px}
+
+    .trk{padding:36px 24px}
     .trk-badge{font-size:11px;margin-bottom:20px;padding-bottom:12px}
     .trk-h{font-size:28px;margin-bottom:10px}
     .trk-p{font-size:15px;margin-bottom:20px}
@@ -238,49 +288,65 @@
     .trk-ul .a{font-size:12px}
     .trk-q{font-size:11px;margin-bottom:18px}
     .trk-btn{font-size:12px;padding:18px 24px;width:100%}
+
+    .steps-header{flex-direction:column;align-items:flex-start;gap:8px}
     .steps{grid-template-columns:1fr}
     .stp{border-right:none;border-bottom:1px solid var(--bdr);padding:28px 0}
-    .stp:first-child{padding-top:0}
-    .stp-n{font-size:40px;margin-bottom:12px}
+    .stp:first-child{padding-top:28px}
+    .stp-n{font-size:48px;margin-bottom:14px}
     .stp-h{font-size:17px;margin-bottom:8px}
     .stp-p{font-size:15px}
+
     .stats-s{padding:var(--sp-section) 0}
-    .stats-r{grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bdr)}
-    .st-b{background:var(--bg);padding:28px 12px}
-    .st-b::after{display:none}
-    .st-n{font-size:36px;margin-bottom:8px}
+    .st-row{padding:16px 0}
+    .st-n{font-size:36px}
     .st-l{font-size:10px}
+
     .ind-f{gap:6px}
     .ind-t{font-size:12px;padding:10px 16px}
+
     .tst{padding:28px 20px}
+    .tst-featured{padding:32px 24px}
+    .tst-featured .tst-q{font-size:20px}
     .tst-q{font-size:18px;padding-left:18px;margin-bottom:12px;line-height:1.5}
     .tst-at{font-size:11px;padding-left:18px}
-    .faq-g{gap:32px}
-    .faq-cl{font-size:11px;margin-bottom:16px;padding-bottom:10px}
+
+    .faq-main{gap:28px}
+    .faq-title{font-size:28px}
+    .faq-sidebar-note{font-size:13px}
+    .faq-cl{font-size:11px;margin-bottom:14px;padding-bottom:10px}
     .fq-q{font-size:15px;padding:16px 0;min-height:48px}
     .fq-q span{font-size:18px}
     .fq-a p{font-size:14px;line-height:1.7}
+
     .cta-end{padding:var(--sp-section) 0}
-    .cta-end .s-p{font-size:16px;max-width:100%}
-    .cta-btns{flex-direction:column;align-items:stretch}
+    .cta-inner{gap:24px}
+    .cta-inner .s-p{font-size:16px;max-width:100%}
+    .cta-btns{flex-direction:column}
     .cta-btns .btn{width:100%}
     .cta-note{font-size:11px}
+
     footer{flex-direction:column;gap:8px;padding:24px 20px;text-align:center}
     footer p{font-size:11px}
   }
 
   @media(max-width:390px){
-    :root{--sp-section:48px;--sp-xl:32px}
-    .hero h1{font-size:38px}
+    :root{--sp-section:48px;--sp-xl:28px;--gutter:16px}
+    .hero{padding:60px 16px 32px}
+    .hero h1{font-size:36px}
     .hero-sub{font-size:15px}
+    .hero-tag{font-size:10px;letter-spacing:0.15em;margin-bottom:20px}
+    .hero-tag::before,.hero-tag::after{width:16px}
     .s-h{font-size:28px}
     .trk-h{font-size:24px}
     .pullquote{font-size:20px}
     .tst-q{font-size:17px}
-    .stats-r{grid-template-columns:1fr}
+    .tst-featured .tst-q{font-size:18px}
+    .hero-nav a{font-size:10px}
+    .h-stat-num{font-size:24px}
   }
 
-  /* MODALS */
+  /* ═══════════════ MODALS ═══════════════ */
   .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:10000;display:none;justify-content:center;align-items:center;padding:20px;opacity:0;transition:opacity 0.3s}
   .modal-overlay.active{display:flex;opacity:1}
   .modal{background:#111;border:1px solid rgba(255,255,255,0.1);width:100%;max-width:520px;max-height:90vh;max-height:90dvh;overflow-y:auto;position:relative;transform:translateY(20px);transition:transform 0.3s}
@@ -310,6 +376,7 @@
   .f-check input{display:none}
   .f-check span{pointer-events:none}
   .f-check:has(input:checked){border-color:var(--accent);color:var(--white);background:var(--accent-soft)}
+
   .modal-success{display:none;text-align:center;padding:60px 40px}
   .modal-success.active{display:block}
   .modal-success-icon{font-size:48px;margin-bottom:20px;color:var(--accent)}
@@ -331,7 +398,7 @@
 </head>
 <body>
 
-<!-- HERO -->
+<!-- ═══════════════ HERO ═══════════════ -->
 <section class="hero">
   <div class="hero-bg">
     <div class="orb orb-1"></div>
@@ -341,17 +408,13 @@
   </div>
 
   <div class="hero-inner">
-    <div class="hero-tag rv">Accepting Applications — Q2 2026</div>
-
-    <h1 class="rv d1">Your Operations,<br><i>Lined.</i></h1>
-
-    <p class="hero-sub rv d2">The placement network for AI operators. Vetted through live builds, not resumes. Both sides apply. Both sides get selected.</p>
-
+    <div class="hero-tag rv">Applications Open — Q2 2026</div>
+    <h1 class="rv d1">The AI Operator<br><i>Network.</i></h1>
+    <p class="hero-sub rv d2">The vetting process that defines who gets to call themselves an AI operator. And the only way to hire one.</p>
     <div class="hero-ctas rv d3">
-      <a href="#" class="btn btn-fill" data-modal="operator">I'm an Operator</a>
-      <a href="#" class="btn btn-line" data-modal="company">I'm a Company</a>
+      <a href="#" class="btn btn-fill" data-modal="operator">Apply as Operator</a>
+      <a href="#" class="btn btn-line" data-modal="company">Hire an Operator</a>
     </div>
-
     <nav class="hero-nav rv d4">
       <a href="#why">why this exists</a>
       <a href="#role">the role</a>
@@ -360,62 +423,53 @@
       <a href="#proof">proof</a>
       <a href="#faq">faq</a>
     </nav>
-
     <div class="hero-stats rv d5">
-      <div class="h-stat">
-        <div class="h-stat-num">834</div>
-        <div class="h-stat-lbl">applications</div>
-      </div>
-      <div class="h-stat">
-        <div class="h-stat-num">2.8<span>%</span></div>
-        <div class="h-stat-lbl">placement rate</div>
-      </div>
-      <div class="h-stat">
-        <div class="h-stat-num">92<span>%</span></div>
-        <div class="h-stat-lbl">retention</div>
-      </div>
-      <div class="h-stat">
-        <div class="h-stat-num">25<span>+</span></div>
-        <div class="h-stat-lbl">industries</div>
-      </div>
+      <div class="h-stat"><div class="h-stat-num">834</div><div class="h-stat-lbl">applied</div></div>
+      <div class="h-stat"><div class="h-stat-num">2.8<span>%</span></div><div class="h-stat-lbl">accepted</div></div>
+      <div class="h-stat"><div class="h-stat-num">92<span>%</span></div><div class="h-stat-lbl">retained</div></div>
+      <div class="h-stat"><div class="h-stat-num">25<span>+</span></div><div class="h-stat-lbl">industries</div></div>
     </div>
   </div>
 </section>
 
-<!-- WHY -->
-<section class="s s-bt" id="why">
-  <div class="wrap">
+<!-- ═══════════════ WHY — full-width split ═══════════════ -->
+<section class="why-s s-bt" id="why">
+  <div class="why-left">
     <div class="lbl rv">Why this exists</div>
-    <h2 class="s-h rv d1">A New Role Is Emerging.<br><i>No One Knows How to Hire for It.</i></h2>
-
-    <div class="why-grid">
-      <div>
-        <p class="s-p rv d2">Every company with 10+ employees is going to need someone who owns AI. Not a consultant who leaves after a slide deck. Not an agency billing $15K per automation. One person who walks in, understands the business, and builds.</p>
-        <p class="s-p rv d3">The problem is this role doesn't exist on linkedin. There's no job title for it. No certification. No degree program. HR teams don't know what to screen for. Recruiters are matching keywords when the real skill is knowing how to audit a business and ship a working system in weeks.</p>
-        <p class="s-p rv d4">We call them AI operators. And we built Oplined to find them, vet them, and connect them with the companies that need them.</p>
-      </div>
-      <div class="rv d3">
-        <div class="pullquote">This is the most in-demand role in business right now. And it barely exists yet.</div>
-      </div>
+    <h2 class="s-h rv d1">We Defined the Role.<br><i>Now We Set the Bar.</i></h2>
+    <p class="s-p rv d2">Every company with 10+ employees needs someone who owns AI. Not a consultant who leaves after a slide deck. Not an agency billing $15K per automation. One person who walks in, understands the business, and builds.</p>
+    <p class="s-p rv d3">This role doesn't exist on linkedin. There's no job title for it. No certification. No degree. HR teams don't know what to screen for. Recruiters match keywords when the real skill is knowing how to audit a business and ship a working system in weeks.</p>
+    <p class="s-p rv d4">So we created the standard. We define what an AI operator is, how they're vetted, and which companies deserve access to them.</p>
+  </div>
+  <div class="why-right">
+    <div class="rv d3">
+      <div class="pullquote">For operators, it's the credential. For companies, it's the shortcut to a hire they don't know how to make.</div>
+      <p class="why-note">834 applied. Under 3% accepted.</p>
     </div>
   </div>
 </section>
 
-<!-- WHAT IS AN AI OPERATOR -->
+<!-- ═══════════════ WHAT IS AN AI OPERATOR ═══════════════ -->
 <section class="s s-bt" id="role">
   <div class="wrap">
-    <div class="lbl rv">The role</div>
-    <h2 class="s-h rv d1">What Is an <i>AI Operator?</i></h2>
-    <p class="s-p rv d2">They sit between strategy and execution. They're not a developer who needs someone to tell them what to build. They're not a consultant who diagnoses and walks away. They do both. Diagnosis to deployment. One person.</p>
+    <div class="role-header">
+      <div>
+        <div class="lbl rv">The role</div>
+        <h2 class="s-h rv d1">What Is an <i>AI Operator?</i></h2>
+      </div>
+      <p class="s-p rv d2" style="max-width:100%">Not a developer waiting for a spec. Not a consultant who diagnoses and disappears. An AI operator sits between strategy and execution. They walk in, understand the business, and build. Diagnosis to deployment. One person.</p>
+    </div>
 
     <div class="op-grid">
-      <ul class="op-list">
-        <li class="rv d1">Audit internal workflows and identify automation opportunities</li>
-        <li class="rv d2">Build AI agents, automations, and RAG systems in production</li>
-        <li class="rv d3">Integrate with existing CRMs, ERPs, and internal tools</li>
-        <li class="rv d4">Replace annual agency and contractor spend with one hire</li>
-        <li class="rv d5">Train internal teams to maintain and scale what they build</li>
-      </ul>
+      <div>
+        <ul class="op-list">
+          <li class="rv d1">Audit internal workflows and identify automation opportunities</li>
+          <li class="rv d2">Build AI agents, automations, and RAG systems in production</li>
+          <li class="rv d3">Integrate with existing CRMs, ERPs, and internal tools</li>
+          <li class="rv d4">Replace annual agency and contractor spend with one hire</li>
+          <li class="rv d5">Train internal teams to maintain and scale what they build</li>
+        </ul>
+      </div>
       <div class="rv d3">
         <div class="tools-w">
           <div class="tools-lbl">tools they work with</div>
@@ -435,326 +489,304 @@
   </div>
 </section>
 
-<!-- TRACKS -->
+<!-- ═══════════════ TRACKS ═══════════════ -->
 <section class="s s-bt" id="tracks">
   <div class="wrap">
     <div class="lbl rv">The tracks</div>
-    <h2 class="s-h rv d1">Three Ways In.</h2>
-    <p class="s-p rv d2">Whether you build, hire, or co-found. Oplined has a path.</p>
+    <h2 class="s-h rv d1">Three Tracks.<br><i>One Standard.</i></h2>
+    <p class="s-p rv d2">Every track has the same vetting rigor. You earn your spot or you don't.</p>
 
     <div class="tracks rv d3">
       <div class="trk">
         <div class="trk-badge">01 — operator track</div>
-        <h3 class="trk-h">Join the Network.</h3>
-        <p class="trk-p">Get in front of companies that need someone to own AI from day one. Full-time roles. $150K+ compensation. Select positions include equity.</p>
+        <h3 class="trk-h">Earn Your Spot.</h3>
+        <p class="trk-p">Accepted operators get access to companies you won't find on any job board. Full-time roles. $150K+ compensation. Select positions include equity.</p>
         <ul class="trk-ul">
-          <li><span class="a">→</span> Accepted into a vetted network of operators</li>
-          <li><span class="a">→</span> Introduced to companies doing $5M-$50M in revenue</li>
-          <li><span class="a">→</span> Matched by industry, skill set, and culture</li>
-          <li><span class="a">→</span> 30-day evaluation window on every hire</li>
+          <li><span class="a">→</span> Live build assessment, not resume screening</li>
+          <li><span class="a">→</span> Placed at companies doing $5M-$50M in revenue</li>
+          <li><span class="a">→</span> Matched by industry, stack, and working style</li>
+          <li><span class="a">→</span> 30-day evaluation window on every placement</li>
         </ul>
         <p class="trk-q">For operators who have shipped AI systems in production.</p>
         <a href="#" class="trk-btn" data-modal="operator">Apply as an Operator</a>
       </div>
-
       <div class="trk">
         <div class="trk-badge">02 — company track</div>
-        <h3 class="trk-h">Get Access.</h3>
-        <p class="trk-p">Access operators you won't find anywhere else. One person who walks in, audits your workflows, and builds. No vendors. No handoffs.</p>
+        <h3 class="trk-h">Hire Different.</h3>
+        <p class="trk-p">Every operator in this network passed a live build assessment that 97% of applicants fail. That vetting is the product. You're hiring from a pool that doesn't exist anywhere else.</p>
         <ul class="trk-ul">
-          <li><span class="a">→</span> Access to a vetted network of AI operators</li>
-          <li><span class="a">→</span> Operators who build in week one</li>
-          <li><span class="a">→</span> Matched to your business, industry, and workflows</li>
-          <li><span class="a">→</span> 30-day evaluation window on every hire</li>
+          <li><span class="a">→</span> Operators vetted through live builds, not resumes</li>
+          <li><span class="a">→</span> Building in week one, not ramping for months</li>
+          <li><span class="a">→</span> Matched to your workflows, industry, and stack</li>
+          <li><span class="a">→</span> 30-day evaluation window on every placement</li>
         </ul>
         <p class="trk-q">For companies doing $5M-$50M in revenue.</p>
-        <a href="#" class="trk-btn" data-modal="company">Apply as a Company</a>
+        <a href="#" class="trk-btn" data-modal="company">Get Started</a>
       </div>
-
       <div class="trk">
         <div class="trk-badge">03 — founder track</div>
         <h3 class="trk-h">Co-Build.</h3>
-        <p class="trk-p">You have domain expertise and distribution. You need a technical operator to build with you. We match operators who want to own what they build.</p>
+        <p class="trk-p">You bring the domain expertise and distribution. We match you with an operator who wants ownership, not a paycheck. Equity-based. Skin in the game.</p>
         <ul class="trk-ul">
-          <li><span class="a">→</span> Equity-based co-building</li>
-          <li><span class="a">→</span> Matched by vertical and ambition</li>
-          <li><span class="a">→</span> For founders with a validated concept or market access</li>
-          <li><span class="a">→</span> Operators who want co-founder dynamics</li>
+          <li><span class="a">→</span> Operator commits as a co-builder, not a contractor</li>
+          <li><span class="a">→</span> Matched by vertical, ambition, and risk tolerance</li>
+          <li><span class="a">→</span> You need a validated concept or market access</li>
+          <li><span class="a">→</span> We don't take every deal. Most get rejected.</li>
         </ul>
-        <p class="trk-q">For non-technical founders ready to build.</p>
+        <p class="trk-q">For non-technical founders with proof, not ideas.</p>
         <a href="#" class="trk-btn" data-modal="founder">Apply as a Founder</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="s s-bt" id="how">
+<!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+<section class="steps-s" id="how">
   <div class="wrap">
-    <div class="lbl rv">Process</div>
-    <h2 class="s-h rv d1">How It Works.</h2>
-
+    <div class="steps-header">
+      <div class="steps-header-left">
+        <div class="lbl rv">Process</div>
+        <h2 class="s-h rv d1">How You Get In.</h2>
+      </div>
+      <div class="steps-header-note rv d2">Same rigor. Both sides.</div>
+    </div>
     <div class="steps">
       <div class="stp rv d1">
         <div class="stp-n">01</div>
         <div class="stp-h">Apply</div>
-        <p class="stp-p">Operators share past builds, tools, and portfolio. Companies share what they need. Founders share expertise and vision. Reviewed on a rolling basis.</p>
+        <p class="stp-p">Operators submit past builds, tools, and results. Companies submit workflows, bottlenecks, and budgets. Founders submit proof of demand. No exceptions.</p>
       </div>
       <div class="stp rv d2">
         <div class="stp-n">02</div>
         <div class="stp-h">Vetting</div>
-        <p class="stp-p">Operators complete live build assessments. Not whiteboard problems. Real builds. Companies complete a business review so we understand your workflows.</p>
+        <p class="stp-p">Operators complete a live build assessment. Not a whiteboard problem. A real build, timed, reviewed by our team. Companies complete a business review. We decide if you're ready.</p>
       </div>
       <div class="stp rv d3">
         <div class="stp-n">03</div>
-        <div class="stp-h">Matching</div>
-        <p class="stp-p">Both sides rank preferences. Matches made on mutual fit. No cold intros. No open listings. One operator. One company. The right fit.</p>
+        <div class="stp-h">Acceptance</div>
+        <p class="stp-p">97% of operators don't make it past this step. Companies that pass get access to the network. Both sides rank preferences. We match on mutual fit.</p>
       </div>
       <div class="stp rv d4">
         <div class="stp-n">04</div>
         <div class="stp-h">Evaluation</div>
-        <p class="stp-p">Every hire starts with a 30-day evaluation window. If it's not the right fit, we rematch. Both sides are protected.</p>
+        <p class="stp-p">Every placement starts with a 30-day evaluation window. If it's not the right fit, we rematch. The standard holds for the entire relationship.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STATS + INDUSTRIES -->
+<!-- ═══════════════ STATS + INDUSTRIES — split ═══════════════ -->
 <section class="stats-s s-bt">
   <div class="wrap">
-    <div class="lbl rv" style="text-align:center;justify-content:center;display:flex">The Network So Far</div>
-    <div class="stats-r">
-      <div class="st-b rv d1"><div class="st-n">834</div><div class="st-l">applications received</div></div>
-      <div class="st-b rv d2"><div class="st-n">2.8<span>%</span></div><div class="st-l">placement rate</div></div>
-      <div class="st-b rv d3"><div class="st-n">92<span>%</span></div><div class="st-l">retention rate</div></div>
-      <div class="st-b rv d4"><div class="st-n">25<span>+</span></div><div class="st-l">industries covered</div></div>
-    </div>
-    <div class="ind-w rv d5">
-      <div class="ind-f">
-        <span class="ind-t">Healthcare</span>
-        <span class="ind-t">Insurance</span>
-        <span class="ind-t">Real Estate</span>
-        <span class="ind-t">Construction</span>
-        <span class="ind-t">Ecommerce</span>
-        <span class="ind-t">SaaS</span>
-        <span class="ind-t">Manufacturing</span>
-        <span class="ind-t">Logistics</span>
-        <span class="ind-t">Financial Services</span>
-        <span class="ind-t">Legal</span>
-        <span class="ind-t">Hospitality</span>
-        <span class="ind-t">Professional Services</span>
-        <span class="ind-t">Education</span>
-        <span class="ind-t">Media</span>
-        <span class="ind-t">Recruiting</span>
-        <span class="ind-t">Agriculture</span>
-        <span class="ind-t">Energy</span>
-        <span class="ind-t">Automotive</span>
-        <span class="ind-t">Food & Beverage</span>
-        <span class="ind-t">Fitness</span>
-        <span class="ind-t">Accounting</span>
-        <span class="ind-t">Home Services</span>
-        <span class="ind-t">Nonprofits</span>
-        <span class="ind-t">Property Management</span>
-        <span class="ind-t">Dental</span>
+    <div class="stats-inner">
+      <div class="stats-left rv">
+        <div class="lbl">The Numbers</div>
+        <div class="st-row"><div class="st-n">834</div><div class="st-l">applied</div></div>
+        <div class="st-row"><div class="st-n">2.8<span>%</span></div><div class="st-l">accepted</div></div>
+        <div class="st-row"><div class="st-n">92<span>%</span></div><div class="st-l">retained after<br>12 months</div></div>
+        <div class="st-row"><div class="st-n">25<span>+</span></div><div class="st-l">industries<br>covered</div></div>
+      </div>
+      <div class="stats-right rv d2">
+        <div class="lbl">Industries</div>
+        <div class="ind-f">
+          <span class="ind-t">Healthcare</span>
+          <span class="ind-t">Insurance</span>
+          <span class="ind-t">Real Estate</span>
+          <span class="ind-t">Construction</span>
+          <span class="ind-t">Ecommerce</span>
+          <span class="ind-t">SaaS</span>
+          <span class="ind-t">Manufacturing</span>
+          <span class="ind-t">Logistics</span>
+          <span class="ind-t">Financial Services</span>
+          <span class="ind-t">Legal</span>
+          <span class="ind-t">Hospitality</span>
+          <span class="ind-t">Professional Services</span>
+          <span class="ind-t">Education</span>
+          <span class="ind-t">Media</span>
+          <span class="ind-t">Recruiting</span>
+          <span class="ind-t">Agriculture</span>
+          <span class="ind-t">Energy</span>
+          <span class="ind-t">Automotive</span>
+          <span class="ind-t">Food & Beverage</span>
+          <span class="ind-t">Fitness</span>
+          <span class="ind-t">Accounting</span>
+          <span class="ind-t">Home Services</span>
+          <span class="ind-t">Nonprofits</span>
+          <span class="ind-t">Property Management</span>
+          <span class="ind-t">Dental</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- ═══════════════ TESTIMONIALS — staggered ═══════════════ -->
 <section class="s s-bt" id="proof">
   <div class="wrap">
     <div class="lbl rv">From the network</div>
-    <h2 class="s-h rv d1">What They're <i>Saying.</i></h2>
+    <h2 class="s-h rv d1">The Standard <i>Speaks.</i></h2>
 
-    <div class="tst-g rv d2">
-      <div class="tst wide">
-        <p class="tst-q">We spent $200K on AI consultants last year. Our operator shipped more in 6 weeks than they did in 12 months.</p>
-        <p class="tst-at">COO — Healthcare company, 80 employees</p>
+    <div class="tst-layout rv d2">
+      <div class="tst-col">
+        <div class="tst tst-featured">
+          <p class="tst-q">We spent $200K on AI consultants last year. Our operator shipped more in 6 weeks than they did in 12 months. The vetting process is why.</p>
+          <p class="tst-at">COO — Healthcare company, 80 employees</p>
+        </div>
+        <div class="tst">
+          <p class="tst-q">Three agencies. $45K spent. Nothing in production. Our operator had two workflows live in the first two weeks.</p>
+          <p class="tst-at">Founder — Construction company, 35 employees</p>
+        </div>
       </div>
-      <div class="tst">
-        <p class="tst-q">I was mass-applying on linkedin for 'AI engineer' roles that didn't describe what I actually do. Oplined matched me in 11 days.</p>
-        <p class="tst-at">AI Operator — now at a $30M ecommerce company</p>
-      </div>
-      <div class="tst">
-        <p class="tst-q">We didn't know what to call the role. We just knew we needed someone who could look at our business and build.</p>
-        <p class="tst-at">CEO — Insurance company, $12M revenue</p>
-      </div>
-      <div class="tst">
-        <p class="tst-q">Three agencies. $45K spent. Nothing in production. Our operator had two workflows live in the first two weeks.</p>
-        <p class="tst-at">Founder — Construction company, 35 employees</p>
-      </div>
-      <div class="tst">
-        <p class="tst-q">I turned down a $250K offer at a tech company to join a $15M services business through Oplined. More ownership. More impact.</p>
-        <p class="tst-at">AI Operator — joined through the network</p>
+      <div class="tst-col">
+        <div class="tst">
+          <p class="tst-q">I stopped applying for 'AI engineer' roles that didn't describe what I do. The network knew exactly what to call it and where to put me.</p>
+          <p class="tst-at">AI Operator — placed at a $30M ecommerce company</p>
+        </div>
+        <div class="tst">
+          <p class="tst-q">We didn't know what to call the role. We didn't know how to vet for it. That's the whole point of the network.</p>
+          <p class="tst-at">CEO — Insurance company, $12M revenue</p>
+        </div>
+        <div class="tst">
+          <p class="tst-q">Turned down a $250K offer at a tech company to join a $15M services business through the network. More ownership. More impact. Better fit.</p>
+          <p class="tst-at">AI Operator — placed through the network</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- ═══════════════ FAQ — sidebar layout ═══════════════ -->
 <section class="s s-bt" id="faq">
   <div class="wrap">
-    <div class="lbl rv">FAQ</div>
-    <h2 class="s-h rv d1">Questions.</h2>
-
-    <div class="faq-g rv d2">
-      <div>
-        <div class="faq-cl">for operators</div>
-        <div class="fq"><div class="fq-q">Who is this for? <span>+</span></div><div class="fq-a"><p>Operators who have shipped AI systems in production. Not students. Not hobbyists. Not prompt engineers. If you've built and deployed real systems that run in a business, apply.</p></div></div>
-        <div class="fq"><div class="fq-q">What do you look for? <span>+</span></div><div class="fq-a"><p>Production experience with tools like Claude Code, Cursor, Make, n8n, or equivalent. You understand business operations. You diagnose before you build. You've worked directly with business owners, not only engineering teams.</p></div></div>
-        <div class="fq"><div class="fq-q">What's the compensation? <span>+</span></div><div class="fq-a"><p>$150K+ base. Select roles include equity. Compensation is determined by the hiring company.</p></div></div>
-        <div class="fq"><div class="fq-q">How selective is this? <span>+</span></div><div class="fq-a"><p>Placement rate is under 3%. We review every application individually. The live build assessment is the deciding factor, not your resume.</p></div></div>
-        <div class="fq"><div class="fq-q">Is this remote or in-person? <span>+</span></div><div class="fq-a"><p>Depends on the company. Preferences are part of the matching process. Roughly 60% of current roles are hybrid or in-person.</p></div></div>
+    <div class="faq-layout rv">
+      <div class="faq-sidebar">
+        <div class="lbl">FAQ</div>
+        <h2 class="faq-title">Questions.</h2>
+        <p class="faq-sidebar-note">If it's not here, ask us.<br>team@agentintegrator.io</p>
       </div>
-
-      <div>
-        <div class="faq-cl">for companies</div>
-        <div class="fq"><div class="fq-q">Who is this for? <span>+</span></div><div class="fq-a"><p>Companies doing $5M-$50M in revenue with 10+ employees. You have workflow bottlenecks, you've tried an agency or consultant, and you need someone full time who owns AI across your business.</p></div></div>
-        <div class="fq"><div class="fq-q">How does it work commercially? <span>+</span></div><div class="fq-a"><p>Companies pay a network fee on successful hires. Operators pay nothing. No retainers. No upfront commitments.</p></div></div>
-        <div class="fq"><div class="fq-q">What if it's not the right fit? <span>+</span></div><div class="fq-a"><p>30-day evaluation window. If it's not right, we rematch at no additional cost.</p></div></div>
-        <div class="fq"><div class="fq-q">How is this different from a recruiter? <span>+</span></div><div class="fq-a"><p>Recruiters match resumes to job descriptions. The AI operator role doesn't exist on traditional hiring platforms. We vet operators through live builds and match them to your actual business.</p></div></div>
-        <div class="fq"><div class="fq-q">What does an operator do inside my company? <span>+</span></div><div class="fq-a"><p>They audit your workflows, identify the highest-value automation opportunities, and build the systems. They integrate with your existing tools. They train your team. They own AI so you don't have to.</p></div></div>
-      </div>
-
-      <div>
-        <div class="faq-cl">for founders</div>
-        <div class="fq"><div class="fq-q">What's the structure? <span>+</span></div><div class="fq-a"><p>Varies by deal. We match operators who want co-founder dynamics. Equity splits are negotiated between both parties. Oplined facilitates the introduction and vetting.</p></div></div>
-        <div class="fq"><div class="fq-q">Do I need a product already? <span>+</span></div><div class="fq-a"><p>No. You need domain expertise, distribution, or a validated concept. The operator brings the technical execution.</p></div></div>
-        <div class="fq"><div class="fq-q">What industries? <span>+</span></div><div class="fq-a"><p>If there's a workflow problem and a market, there's a fit.</p></div></div>
+      <div class="faq-main">
+        <div>
+          <div class="faq-cl">for operators</div>
+          <div class="fq"><div class="fq-q">Who qualifies? <span>+</span></div><div class="fq-a"><p>You've shipped AI systems in production environments. Not side projects. Not demos. If a business is running on something you built, you qualify to apply. Everyone else is too early.</p></div></div>
+          <div class="fq"><div class="fq-q">What does the vetting look like? <span>+</span></div><div class="fq-a"><p>A live build assessment. You get a real business scenario, real constraints, and a time limit. We evaluate how you diagnose, what you build, and whether the output is production-grade. Your resume gets you in the door. The build decides everything.</p></div></div>
+          <div class="fq"><div class="fq-q">What's the compensation? <span>+</span></div><div class="fq-a"><p>$150K+ base. Select positions include equity. Operators in this network are not competing on price. The standard is the leverage.</p></div></div>
+          <div class="fq"><div class="fq-q">What's the acceptance rate? <span>+</span></div><div class="fq-a"><p>Under 3%. That's by design. The companies in this network are paying for the fact that we already did the vetting they don't know how to do.</p></div></div>
+          <div class="fq"><div class="fq-q">Is this remote or in-person? <span>+</span></div><div class="fq-a"><p>Depends on the placement. Preferences are part of the matching. Roughly 60% of current roles are hybrid or in-person.</p></div></div>
+        </div>
+        <div>
+          <div class="faq-cl">for companies</div>
+          <div class="fq"><div class="fq-q">Why hire through the network? <span>+</span></div><div class="fq-a"><p>Every operator in this network passed a live build assessment that 97% of applicants fail. You're not screening candidates. We already did that. You're choosing from a pool of people who have proven they ship production systems inside real businesses.</p></div></div>
+          <div class="fq"><div class="fq-q">What does the process look like? <span>+</span></div><div class="fq-a"><p>Tell us about your business, your workflows, and what you need. We match you with operators who fit your industry, stack, and working style. You meet them, evaluate them, and hire with a 30-day evaluation window. Network fee on successful placement. No retainers. No upfront cost.</p></div></div>
+          <div class="fq"><div class="fq-q">What if it's not the right fit? <span>+</span></div><div class="fq-a"><p>30-day evaluation window. If it's not right, we rematch at no additional cost. Our retention rate is 92% because the vetting works.</p></div></div>
+          <div class="fq"><div class="fq-q">How is this different from a recruiter? <span>+</span></div><div class="fq-a"><p>Recruiters match resumes to job descriptions. This role doesn't have a job description yet. We created the vetting standard because traditional hiring doesn't work for a role that barely exists. The live build assessment catches what resumes miss.</p></div></div>
+          <div class="fq"><div class="fq-q">What does an operator do inside my company? <span>+</span></div><div class="fq-a"><p>Audit your workflows. Identify the highest-value automation opportunities. Build the systems. Integrate with your existing tools. Train your team to maintain it. One person replaces your entire AI vendor stack.</p></div></div>
+        </div>
+        <div>
+          <div class="faq-cl">for founders</div>
+          <div class="fq"><div class="fq-q">What's the structure? <span>+</span></div><div class="fq-a"><p>Equity-based. We match operators who want co-founder dynamics, not contract work. Splits are negotiated between both parties. The network vets both sides before making the introduction.</p></div></div>
+          <div class="fq"><div class="fq-q">Do I need a product already? <span>+</span></div><div class="fq-a"><p>No. But you need proof of demand. Domain expertise, existing distribution, LOIs, revenue from a manual version. Ideas alone don't qualify.</p></div></div>
+          <div class="fq"><div class="fq-q">What industries? <span>+</span></div><div class="fq-a"><p>If there's a workflow problem, a market willing to pay, and proof you have access to that market, there's a fit.</p></div></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BOTTOM CTA -->
+<!-- ═══════════════ BOTTOM CTA — left-aligned ═══════════════ -->
 <section class="cta-end s-bt" id="apply">
   <div class="wrap">
-    <h2 class="s-h rv">Both Sides Apply.<br><i>Both Sides Get Selected.</i></h2>
-    <p class="s-p rv d1">The AI operator is the most important hire your company will make this year. Oplined is how you find them.</p>
-    <div class="cta-btns rv d2">
-      <a href="#" class="btn btn-fill" data-modal="operator">I'm an Operator</a>
-      <a href="#" class="btn btn-line" data-modal="company">I'm a Company</a>
-      <a href="#" class="btn btn-line" data-modal="founder">I'm a Founder</a>
+    <div class="cta-inner">
+      <div>
+        <h2 class="s-h rv">The Network <i>Is Open.</i></h2>
+        <p class="s-p rv d1">For operators: earn the credential that sets you apart. For companies: hire from a pool that doesn't exist anywhere else.</p>
+        <div class="cta-btns rv d2">
+          <a href="#" class="btn btn-fill" data-modal="operator">Apply as Operator</a>
+          <a href="#" class="btn btn-line" data-modal="company">Hire an Operator</a>
+          <a href="#" class="btn btn-line" data-modal="founder">Apply as Founder</a>
+        </div>
+      </div>
+      <div class="cta-right rv d3">
+        <div class="cta-note">Rolling basis. Under 3% of operators accepted.</div>
+      </div>
     </div>
-    <div class="cta-note rv d3">Applications reviewed on a rolling basis.</div>
   </div>
 </section>
 
-<!-- MODAL: OPERATOR -->
+<!-- ═══════════════ MODAL: OPERATOR ═══════════════ -->
 <div class="modal-overlay" id="modal-operator">
   <div class="modal">
-    <button class="modal-close">&#10005;</button>
+    <button class="modal-close">✕</button>
     <div class="modal-content">
       <div class="modal-head">
         <div class="modal-badge">Operator Track</div>
-        <div class="modal-title">Apply as an Operator.</div>
-        <p class="modal-sub">2.8% placement rate. We review every application individually. The live build assessment is the deciding factor.</p>
+        <div class="modal-title">Earn Your Spot.</div>
+        <p class="modal-sub">Under 3% accepted. Your resume gets you in the door. The live build assessment decides everything.</p>
       </div>
       <div class="modal-body">
         <form data-track="operator">
-          <div class="f-row">
-            <div class="f-group"><label class="f-label">First Name</label><input type="text" class="f-input" placeholder="First name" required></div>
-            <div class="f-group"><label class="f-label">Last Name</label><input type="text" class="f-input" placeholder="Last name" required></div>
-          </div>
+          <div class="f-row"><div class="f-group"><label class="f-label">First Name</label><input type="text" class="f-input" placeholder="First name" required></div><div class="f-group"><label class="f-label">Last Name</label><input type="text" class="f-input" placeholder="Last name" required></div></div>
           <div class="f-group"><label class="f-label">Email</label><input type="email" class="f-input" placeholder="you@email.com" required></div>
           <div class="f-group"><label class="f-label">LinkedIn or Portfolio</label><input type="url" class="f-input" placeholder="https://..." required></div>
-          <div class="f-group">
-            <label class="f-label">How many AI systems have you shipped in production?</label>
-            <select class="f-select" required><option value="" disabled selected>Select</option><option>0 (still learning)</option><option>1-2</option><option>3-5</option><option>6-10</option><option>10+</option></select>
-          </div>
+          <div class="f-group"><label class="f-label">How many AI systems have you shipped in production?</label><select class="f-select" required><option value="" disabled selected>Select</option><option>0 (still learning)</option><option>1-2</option><option>3-5</option><option>6-10</option><option>10+</option></select></div>
           <div class="f-group"><label class="f-label">Describe your strongest production build.</label><textarea class="f-textarea" placeholder="What was the business? What did you build? What tools did you use? What was the measurable result? Be specific." required></textarea></div>
-          <div class="f-group">
-            <label class="f-label">Your primary stack (select all that apply)</label>
-            <div class="f-checks">
-              <label class="f-check"><input type="checkbox" value="Claude Code"><span>Claude Code</span></label>
-              <label class="f-check"><input type="checkbox" value="Cursor"><span>Cursor</span></label>
-              <label class="f-check"><input type="checkbox" value="Python"><span>Python</span></label>
-              <label class="f-check"><input type="checkbox" value="Make / n8n / Zapier"><span>Make / n8n / Zapier</span></label>
-              <label class="f-check"><input type="checkbox" value="LangChain / LlamaIndex"><span>LangChain / LlamaIndex</span></label>
-              <label class="f-check"><input type="checkbox" value="Custom APIs / Backends"><span>Custom APIs / Backends</span></label>
-              <label class="f-check"><input type="checkbox" value="RAG / Vector DBs"><span>RAG / Vector DBs</span></label>
-              <label class="f-check"><input type="checkbox" value="GoHighLevel / CRM automations"><span>GoHighLevel / CRM Automations</span></label>
-            </div>
-          </div>
-          <div class="f-group">
-            <label class="f-label">Have you worked directly with business owners (not just engineering teams)?</label>
-            <select class="f-select" required><option value="" disabled selected>Select</option><option>Yes, regularly. I diagnose the business problem myself.</option><option>Sometimes. I've worked with non-technical stakeholders.</option><option>No. I've mostly worked within engineering teams.</option></select>
-          </div>
+          <div class="f-group"><label class="f-label">Your primary stack (select all that apply)</label><div class="f-checks"><label class="f-check"><input type="checkbox" value="Claude Code"><span>Claude Code</span></label><label class="f-check"><input type="checkbox" value="Cursor"><span>Cursor</span></label><label class="f-check"><input type="checkbox" value="Python"><span>Python</span></label><label class="f-check"><input type="checkbox" value="Make / n8n / Zapier"><span>Make / n8n / Zapier</span></label><label class="f-check"><input type="checkbox" value="LangChain / LlamaIndex"><span>LangChain / LlamaIndex</span></label><label class="f-check"><input type="checkbox" value="Custom APIs / Backends"><span>Custom APIs / Backends</span></label><label class="f-check"><input type="checkbox" value="RAG / Vector DBs"><span>RAG / Vector DBs</span></label><label class="f-check"><input type="checkbox" value="GoHighLevel / CRM automations"><span>GoHighLevel / CRM Automations</span></label></div></div>
+          <div class="f-group"><label class="f-label">Have you worked directly with business owners (not just engineering teams)?</label><select class="f-select" required><option value="" disabled selected>Select</option><option>Yes, regularly. I diagnose the business problem myself.</option><option>Sometimes. I've worked with non-technical stakeholders.</option><option>No. I've mostly worked within engineering teams.</option></select></div>
           <div class="f-group"><label class="f-label">Industries you've built for</label><input type="text" class="f-input" placeholder="e.g. Insurance, Real Estate, Healthcare, Ecommerce" required></div>
-          <div class="f-row">
-            <div class="f-group"><label class="f-label">Target compensation</label><select class="f-select" required><option value="" disabled selected>Select range</option><option>$100K - $150K</option><option>$150K - $200K</option><option>$200K - $250K</option><option>$250K+</option></select></div>
-            <div class="f-group"><label class="f-label">Work setup</label><select class="f-select" required><option value="" disabled selected>Select</option><option>Remote only</option><option>Hybrid</option><option>In-person</option><option>No preference</option></select></div>
-          </div>
+          <div class="f-row"><div class="f-group"><label class="f-label">Target compensation</label><select class="f-select" required><option value="" disabled selected>Select range</option><option>$100K - $150K</option><option>$150K - $200K</option><option>$200K - $250K</option><option>$250K+</option></select></div><div class="f-group"><label class="f-label">Work setup</label><select class="f-select" required><option value="" disabled selected>Select</option><option>Remote only</option><option>Hybrid</option><option>In-person</option><option>No preference</option></select></div></div>
           <div class="f-group"><label class="f-label">Why should we accept you?</label><textarea class="f-textarea" placeholder="What makes you different from the other 97% of applicants? What do you bring that most 'AI engineers' don't?" required></textarea></div>
           <button type="submit" class="f-submit">Submit Application</button>
           <p class="f-note">Reviewed within 5 business days. Accepted operators are invited to a live build assessment.</p>
         </form>
       </div>
     </div>
-    <div class="modal-success"><div class="modal-success-icon">&#10003;</div><h3>Application Received.</h3><p>We review every application individually. If you're selected to move forward, you'll hear from us within 5 business days with details on the live build assessment.</p></div>
+    <div class="modal-success"><div class="modal-success-icon">✓</div><h3>Application Received.</h3><p>We review every application individually. If you're selected to move forward, you'll hear from us within 5 business days with details on the live build assessment.</p></div>
   </div>
 </div>
 
-<!-- MODAL: COMPANY -->
+<!-- ═══════════════ MODAL: COMPANY ═══════════════ -->
 <div class="modal-overlay" id="modal-company">
   <div class="modal">
-    <button class="modal-close">&#10005;</button>
+    <button class="modal-close">✕</button>
     <div class="modal-content">
       <div class="modal-head">
         <div class="modal-badge">Company Track</div>
-        <div class="modal-title">Get Access.</div>
-        <p class="modal-sub">For companies doing $5M-$50M in revenue. We vet every company the same way we vet every operator.</p>
+        <div class="modal-title">Hire Different.</div>
+        <p class="modal-sub">Every operator in this network passed a vetting process that 97% of applicants fail. Tell us about your business and we'll find the right one.</p>
       </div>
       <div class="modal-body">
         <form data-track="company">
-          <div class="f-row">
-            <div class="f-group"><label class="f-label">Your Name</label><input type="text" class="f-input" placeholder="Full name" required></div>
-            <div class="f-group"><label class="f-label">Title</label><input type="text" class="f-input" placeholder="e.g. CEO, COO, VP Ops" required></div>
-          </div>
+          <div class="f-row"><div class="f-group"><label class="f-label">Your Name</label><input type="text" class="f-input" placeholder="Full name" required></div><div class="f-group"><label class="f-label">Title</label><input type="text" class="f-input" placeholder="e.g. CEO, COO, VP Ops" required></div></div>
           <div class="f-group"><label class="f-label">Work Email</label><input type="email" class="f-input" placeholder="you@company.com" required></div>
           <div class="f-group"><label class="f-label">Company Name</label><input type="text" class="f-input" placeholder="Company name" required></div>
           <div class="f-group"><label class="f-label">Company Website</label><input type="url" class="f-input" placeholder="https://..." required></div>
-          <div class="f-row">
-            <div class="f-group"><label class="f-label">Industry</label><input type="text" class="f-input" placeholder="e.g. Insurance, Healthcare" required></div>
-            <div class="f-group"><label class="f-label">Annual Revenue</label><select class="f-select" required><option value="" disabled selected>Select range</option><option>Under $1M</option><option>$1M - $5M</option><option>$5M - $10M</option><option>$10M - $25M</option><option>$25M - $50M</option><option>$50M+</option></select></div>
-          </div>
-          <div class="f-row">
-            <div class="f-group"><label class="f-label">Headcount</label><select class="f-select" required><option value="" disabled selected>Select range</option><option>Under 10</option><option>10 - 25</option><option>25 - 50</option><option>50 - 100</option><option>100 - 250</option><option>250+</option></select></div>
-            <div class="f-group"><label class="f-label">Decision maker?</label><select class="f-select" required><option value="" disabled selected>Select</option><option>Yes, I make the hiring decision.</option><option>I influence the decision but don't own it.</option><option>No, I'm researching for someone else.</option></select></div>
-          </div>
-          <div class="f-group">
-            <label class="f-label">Have you tried AI agencies, consultants, or internal hires for this?</label>
-            <select class="f-select" required><option value="" disabled selected>Select</option><option>Yes, we spent money and got no results.</option><option>Yes, partial results but nothing stuck.</option><option>No, this is our first attempt.</option><option>We have some internal AI but need to scale.</option></select>
-          </div>
+          <div class="f-row"><div class="f-group"><label class="f-label">Industry</label><input type="text" class="f-input" placeholder="e.g. Insurance, Healthcare" required></div><div class="f-group"><label class="f-label">Annual Revenue</label><select class="f-select" required><option value="" disabled selected>Select range</option><option>Under $1M</option><option>$1M - $5M</option><option>$5M - $10M</option><option>$10M - $25M</option><option>$25M - $50M</option><option>$50M+</option></select></div></div>
+          <div class="f-row"><div class="f-group"><label class="f-label">Headcount</label><select class="f-select" required><option value="" disabled selected>Select range</option><option>Under 10</option><option>10 - 25</option><option>25 - 50</option><option>50 - 100</option><option>100 - 250</option><option>250+</option></select></div><div class="f-group"><label class="f-label">Decision maker?</label><select class="f-select" required><option value="" disabled selected>Select</option><option>Yes, I make the hiring decision.</option><option>I influence the decision but don't own it.</option><option>No, I'm researching for someone else.</option></select></div></div>
+          <div class="f-group"><label class="f-label">Have you tried AI agencies, consultants, or internal hires for this?</label><select class="f-select" required><option value="" disabled selected>Select</option><option>Yes, we spent money and got no results.</option><option>Yes, partial results but nothing stuck.</option><option>No, this is our first attempt.</option><option>We have some internal AI but need to scale.</option></select></div>
           <div class="f-group"><label class="f-label">What are the top 2-3 workflows costing you the most time or money?</label><textarea class="f-textarea" placeholder="Be specific. 'Lead follow-up takes 6 hours/day across 3 reps' is better than 'we need AI for sales.'" required></textarea></div>
           <div class="f-group"><label class="f-label">What does success look like 90 days after hiring an operator?</label><textarea class="f-textarea" placeholder="What's running? What's automated? What's the measurable impact?" required></textarea></div>
           <div class="f-group"><label class="f-label">Budget for this role (annual)</label><select class="f-select" required><option value="" disabled selected>Select range</option><option>$100K - $150K</option><option>$150K - $200K</option><option>$200K - $250K</option><option>$250K+ (includes equity)</option><option>Not sure yet</option></select></div>
-          <button type="submit" class="f-submit">Submit Application</button>
-          <p class="f-note">No retainers. No upfront cost. We review and respond within 3 business days.</p>
+          <button type="submit" class="f-submit">Get Started</button>
+          <p class="f-note">No retainers. No upfront cost. We respond within 3 business days.</p>
         </form>
       </div>
     </div>
-    <div class="modal-success"><div class="modal-success-icon">&#10003;</div><h3>Application Received.</h3><p>We review every company individually. If there's a fit, we'll reach out within 3 business days to schedule a discovery call.</p></div>
+    <div class="modal-success"><div class="modal-success-icon">✓</div><h3>We're On It.</h3><p>We'll review your business and reach out within 3 business days. If there's a fit, we'll schedule a call to walk through your workflows and match you with the right operator.</p></div>
   </div>
 </div>
 
-<!-- MODAL: FOUNDER -->
+<!-- ═══════════════ MODAL: FOUNDER ═══════════════ -->
 <div class="modal-overlay" id="modal-founder">
   <div class="modal">
-    <button class="modal-close">&#10005;</button>
+    <button class="modal-close">✕</button>
     <div class="modal-content">
       <div class="modal-head">
         <div class="modal-badge">Founder Track</div>
         <div class="modal-title">Co-Build.</div>
-        <p class="modal-sub">We don't take every deal. We take the ones we'd bet four years of our lives on. Convince us this is one of them.</p>
+        <p class="modal-sub">Most founder applications get rejected. We take the ones where the demand is real and the founder has the access to prove it.</p>
       </div>
       <div class="modal-body">
         <form data-track="founder">
-          <div class="f-row">
-            <div class="f-group"><label class="f-label">First Name</label><input type="text" class="f-input" placeholder="First name" required></div>
-            <div class="f-group"><label class="f-label">Last Name</label><input type="text" class="f-input" placeholder="Last name" required></div>
-          </div>
+          <div class="f-row"><div class="f-group"><label class="f-label">First Name</label><input type="text" class="f-input" placeholder="First name" required></div><div class="f-group"><label class="f-label">Last Name</label><input type="text" class="f-input" placeholder="Last name" required></div></div>
           <div class="f-group"><label class="f-label">Email</label><input type="email" class="f-input" placeholder="you@email.com" required></div>
           <div class="f-group"><label class="f-label">LinkedIn or Personal Site</label><input type="url" class="f-input" placeholder="https://..." required></div>
           <div class="f-group"><label class="f-label">How many years in your industry?</label><select class="f-select" required><option value="" disabled selected>Select</option><option>Under 3 years</option><option>3 - 5 years</option><option>5 - 10 years</option><option>10 - 20 years</option><option>20+ years</option></select></div>
@@ -769,13 +801,12 @@
         </form>
       </div>
     </div>
-    <div class="modal-success"><div class="modal-success-icon">&#10003;</div><h3>Application Received.</h3><p>We review every application individually. If we see a fit, you'll hear from us within 5 business days.</p></div>
+    <div class="modal-success"><div class="modal-success-icon">✓</div><h3>Application Received.</h3><p>We review every application individually. If we see a fit, you'll hear from us within 5 business days.</p></div>
   </div>
 </div>
 
 <footer>
-  <p>&copy; 2026 Oplined</p>
-  <p><a href="https://twitter.com/oplined" target="_blank">@oplined</a></p>
+  <p>© 2026 AI Operator Network</p>
   <p>Applications Open</p>
 </footer>
 
